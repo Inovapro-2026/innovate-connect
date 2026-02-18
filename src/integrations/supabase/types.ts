@@ -1255,6 +1255,48 @@ export type Database = {
         }
         Relationships: []
       }
+      projects: {
+        Row: {
+          category: string | null
+          cover_image_url: string | null
+          created_at: string | null
+          description: string | null
+          freelancer_id: string
+          id: string
+          image_urls: string[] | null
+          price: number
+          status: string | null
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          category?: string | null
+          cover_image_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          freelancer_id: string
+          id?: string
+          image_urls?: string[] | null
+          price?: number
+          status?: string | null
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          category?: string | null
+          cover_image_url?: string | null
+          created_at?: string | null
+          description?: string | null
+          freelancer_id?: string
+          id?: string
+          image_urls?: string[] | null
+          price?: number
+          status?: string | null
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       promotion_products: {
         Row: {
           created_at: string
@@ -1643,18 +1685,21 @@ export type Database = {
         Row: {
           balance: number | null
           id: string
+          pending_balance: number | null
           updated_at: string | null
           user_id: string
         }
         Insert: {
           balance?: number | null
           id?: string
+          pending_balance?: number | null
           updated_at?: string | null
           user_id: string
         }
         Update: {
           balance?: number | null
           id?: string
+          pending_balance?: number | null
           updated_at?: string | null
           user_id?: string
         }
